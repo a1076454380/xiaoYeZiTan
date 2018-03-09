@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物界面</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/change.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script src="action/common.js"></script>
+    <script src="js/transport.js"></script>
+    <!-- 兼容ecshop -->
+    <script type="text/javascript">
+        $(function() {
+        window.__Object_toJSONString = Object.prototype.toJSONString;
+        delete Object.prototype.toJSONString;
+        });
+    </script>
+    <style>
+        .cateTree{display: none;}
+        .q-menu:hover .cateTree{display: block;}
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+    var process_request = "正在处理您的请求...";
+    </script>
+    <div id="append_parent"></div>
+    <div class="header">
+        <div class="container margin-center" id="page_header">
+            <div class="logo-q-menu fl">
+                <a href="/" class="logo"><img src="images/logo.gif" alt="小叶紫檀商城-物美价廉的小叶紫檀购物商城,货真价实的小叶紫檀购物商城."></a>
+                <div class="q-menu">
+                    <a href="javascript:void(0)" class="all">全部品类</a>
+                    <ul class="cateTree">
+                        <li class="cate01">
+                            <dl>
+                                <dt><a href="category.php?id=33">手串</a></dt>
+                                <dd><a href="category.php?id=36">金星</a></dd>
+                                <dd><a href="category.php?id=35">老料</a></dd>
+                                <dd><a href="category.php?id=41">鸡血料</a></dd>
+                                <dd><a href="category.php?id=52">泥料</a></dd>
+                                <dd><a href="category.php?id=39">瘿子</a></dd>
+                                <dd><a href="category.php?id=43">包浆</a></dd>
+                                <dd><a href="category.php?id=48">瘤疤</a></dd>
+                                <dd><a href="category.php?id=40">水波纹</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate02">
+                            <dl>
+                                <dt><a href="category.php?id=26">把件</a></dt>
+                                <dd><a href="category.php?id=44">生肖</a></dd>
+                                <dd><a href="category.php?id=45">雕刻品</a></dd>
+                                <dd><a href="category.php?id=46">摆件</a></dd>
+                                <dd><a href="category.php?id=47">貔貅</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate03">
+                            <dl>
+                                <dt><a href="category.php?id=1">木料</a></dt>
+                                <dd><a href="category.php?id=63">饼料</a></dd>
+                                <dd><a href="category.php?id=64">野生料</a></dd>
+                                <dd><a href="category.php?id=65">拆房料</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate04">
+                            <dl>
+                                <dt><a href="category.php?id=34">工具</a></dt>
+                                <dd><a href="category.php?id=66">文玩保养</a></dd>
+                                <dd><a href="category.php?id=67">盘玩套装</a></dd>
+                                <dd><a href="category.php?id=68">打磨机器</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-small-menu fr">
+                <div class="small tr">
+                    <span class="login-reg"><a href="user.php">登录</a><a href="user.php?act=register">注册</a></span>
+                                    
+                    <span id="ECS_HCARTINFO" class="car"><a href="flow.php" title="查看购物车">购物车(<i>0</i>)</a></span>
+                </div>
+                <div class="search">
+                    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()">
+                        <div class="keywords-box fl">
+                            <input name="keywords" placeholder="搜索你要的产品" type="text" id="keyword" value="" class="search_input"  />
+                        </div>
+                        <div class="btn-box fl">
+                            <input name="imageField" type="submit" value="搜索" class="btn-submit" />
+                        </div>
+                        <div class="flow-one fl">400-0099-115</div>
+                        <div class="flow-two fl">服务时间：8：30-23：00</div>
+                    </form>
+                    <div class="search-keys">热门搜索：
+                        <a href="search.php?keywords=%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80">小叶紫檀</a>
+                        <a href="search.php?keywords=%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80%E6%89%8B%E4%B8%B2">小叶紫檀手串</a>
+                        <a href="search.php?keywords=%E9%87%91%E6%98%9F">金星</a>
+                        <a href="search.php?keywords=%E5%8D%B0%E5%BA%A6%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80">印度小叶紫檀</a>
+                    </div>
+                </div>
+                <ul class="menu">
+                    <li class="on"><a href="/">首页</a></li>
+                    <li ><a href="category.php?id=33" >手串</a></li>
+                    <li ><a href="category.php?id=26" >把件</a></li>
+                    <li ><a href="category.php?id=1" >定制</a></li>
+                    <li ><a href="category.php?id=34" >工具</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <style>
+    </style>
+    <!-- 内容详情 -->
+    <div class="main">
+        <div class="mainMain">
+            <h2 class="title">
+                <div class="path">
+                    <a href=".">首页</a> <code>&gt;</code> <a href="category.php?id=33">手串</a> <code>&gt;</code> 小叶紫檀男女手串1.2老料带金星佛珠民族风爆款
+                </div>
+            </h2>
+            <div class="mainTop">
+                <div class="photoBox">
+                    <a href="images/201708/goods_img/448_G_1503280317548.jpg" id="zoom1" class="MagicZoom MagicThumb bigPhoto"><img src="images/201708/goods_img/448_G_1503280317548.jpg" id="main_img" class="main_img"  /></a>
+                    <div class="exampleBox">
+                        <div id="slider1">
+                            <div class="thumbelina-but horiz left" id="gotop"></div>
+                            <div class="thumbelina" id="showArea">
+                                <a href="images/201708/thumb_img/448_thumb_P_1503047072587.jpg" rev="images/201708/thumb_img/448_thumb_P_1503047072587.jpg" rel="zoom1" rev="images/201708/thumb_img/448_thumb_P_1503047072587.jpg"><img src="images/201708/thumb_img/448_thumb_P_1503047072587.jpg" alt="小叶紫檀男女手串1.2老料带金星佛珠民族风爆款" class="B_blue" /></a>
+                                <a href="images/201708/thumb_img/448_thumb_P_1503047072939.jpg" rev="images/201708/thumb_img/448_thumb_P_1503047072939.jpg" rel="zoom1" rev="images/201708/thumb_img/448_thumb_P_1503047072939.jpg"><img src="images/201708/thumb_img/448_thumb_P_1503047072939.jpg" alt="小叶紫檀男女手串1.2老料带金星佛珠民族风爆款" class="B_blue" /></a>
+                                <a href="images/201708/thumb_img/448_thumb_P_1503047072225.jpg" rev="images/201708/thumb_img/448_thumb_P_1503047072225.jpg" rel="zoom1" rev="images/201708/thumb_img/448_thumb_P_1503047072225.jpg"><img src="images/201708/thumb_img/448_thumb_P_1503047072225.jpg" alt="小叶紫檀男女手串1.2老料带金星佛珠民族风爆款" class="B_blue" /></a>
+                                <a href="images/201708/thumb_img/448_thumb_P_1503047072374.jpg" rev="images/201708/thumb_img/448_thumb_P_1503047072374.jpg" rel="zoom1" rev="images/201708/thumb_img/448_thumb_P_1503047072374.jpg"><img src="images/201708/thumb_img/448_thumb_P_1503047072374.jpg" alt="小叶紫檀男女手串1.2老料带金星佛珠民族风爆款" class="B_blue" /></a>
+                                <a href="images/201708/thumb_img/448_thumb_P_1503280317856.jpg" rev="images/201708/thumb_img/448_thumb_P_1503280317856.jpg" rel="zoom1" rev="images/201708/thumb_img/448_thumb_P_1503280317856.jpg"><img src="images/201708/thumb_img/448_thumb_P_1503280317856.jpg" alt="小叶紫檀男女手串1.2老料带金星佛珠民族风爆款" class="B_blue" /></a>
+                            </div>
+                            <div class="thumbelina-but horiz right" id="gobottom"></div>
+                        </div>
+                        <script>
+                            function def(e) {return document.getElementById(e);}
+                            document.getElementsByClassName = function(cl) {
+                            var retnode = [];
+                            var myclass = new RegExp('\\b'+cl+'\\b');
+                            var elem = this.getElementsByTagName('*');
+                            for (var i = 0; i < elem.length; i++) {
+                            var classes = elem[i].className;
+                            if (myclass.test(classes)) retnode.push(elem[i]);
+                            }
+                            return retnode;
+                            }
+                            var MyMar;
+                            var speed = 1;
+                            var spec = 1;
+                            var thumbs = document.getElementsByClassName('B_blue');
+                            for (var i=0; i<thumbs.length; i++) {
+                            /*thumbs[i].click = function(){
+                            document.getElementsByClassName('main_img')[0].src = this.src;
+                            };*/
+                            }
+                            def('gotop').onmouseover = function() {MyMar=setInterval(gotop,speed);}
+                            def('gotop').onmouseout = function() {clearInterval(MyMar);}
+                            def('gobottom').onmouseover = function() {MyMar=setInterval(gobottom,speed);}
+                            def('gobottom').onmouseout = function() {clearInterval(MyMar);}
+                            function gotop(){
+                            def('showArea').scrollLeft-=spec;
+                            }
+                            function gobottom(){
+                            def('showArea').scrollLeft+=spec;
+                            }
+                        </script>                
+                    </div>
+                    <div class="share">
+                        <a href="javascript:void(0)" onclick="collect(448)" class="addLogo">加入收藏</a>
+                        <a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=e20b5dc1-1b07-4d17-9ad7-e2616e41b2c8&amp;style=1&amp;bp=qqmb,bsharesync,sinaminiblog,qzone,189share,sohuminiblog,renren,xinhuamb,tianya,shouji,ifengmb,neteasemb,qqxiaoyou,kaixin001,weixin,douban,qqim"></script>
+                    </div>
+                </div>
+                <form action="javascript:addToCart(448)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+                    <div class="detail">
+                        <h1 class="shopTitle">小叶紫檀男女手串1.2老料带金星佛珠民族风爆款</h1>
+                        <h2 class="zhushi">小叶紫檀 小叶紫檀手串 1.2 老料 金星</h2>
+                        <div class="price">
+                            <del style="color: #5a5a5a;">原价：&yen;<font>399.00</font></del>
+                            <h3>促销价：
+                                <span class="nowPrice" id="ECS_GOODS_AMOUNT">&yen;488.00元</span>
+                                <a href="" style="color: #fff;background: #ff0000;font-size: 10px;padding: 1px 10px;">活动价</a>
+                            </h3>
+                        </div>
+                        <div class="activity">
+                            <ul class="youhui">
+                                <li><span class="smallTitle">优惠</span><span class="redBg">限时</span><h4>已优惠</h4>￥-488.00</li>
+                            </ul>
+                        </div>
+                        <div class="yuexl">
+                            <font>月销量 <span>1100</span></font>
+                            <font>累计评价 <span>1000</span></font>
+                            <font>送商城积分 <span style="color: #ff0000;">300</span></font>
+                        </div>
+                        <div class="pinpai">
+                            <div class="pinLeft">
+                                <ul>
+                                    <li><span>品牌：</span>小叶紫檀网</li>
+                                    <li><span>库存：</span>10</li>
+                                    <li>
+                                        <span>大小：</span>
+                                        <span class="big_small "><img src="images/451_thumb_G_1503124526921.jpg"></span>
+                                        <span class="big_small border_red"><img src="images/451_thumb_G_1503124526921.jpg"></span>
+                                    </li>
+                                </ul>
+                                <div class="buyNumber">
+                                    <h5>购买数量：</h5>
+                                    <input value="-" class="jian" type="button">
+                                    <input name="number" type="text" id="number" value="1" size="4"  class="shuzhi"/>
+                                    <input value="+" class="add" type="button">
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <input class="mastBuy" value="立即购买" onclick="addToCart(448)" type="button">
+                                <input class="addCar" onclick="addToCarts(448)" value="加入购物车" type="button">
+                            </div>
+                            <div class="erweimab">
+                                <div class="phoneBuy"><a href="#">用手机购买</a></div>
+                            </div>
+                        </div>
+                        <div class="payStyle">
+                            <div class="zhifu">
+                                <ul>
+                                    <li class="zhifuFont">支付:</li>
+                                    <li><a href="#" id="payBao">支付宝</a></li>
+                                    <li><a href="#" id="payWei">微信支付</a></li>
+                                    <li><a href="#" id="payCai">财付通</a></li>
+                                    <li><a href="#" id="payCard">银行卡支付</a></li>
+                                </ul>
+                            </div>
+                            <div class="afterPay">
+                                <ul>
+                                    <li id="xiaoye">小叶服务</li>
+                                    <li>正品保证</li>
+                                    <li>七天无理由退换</li>
+                                    <li>极速退款</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <!-- 推荐产品 -->
+        <div class="mainMod">
+            <div class="recommed">
+            <div class="tuijian">
+            推荐产品
+            </div>
+            <div class="tuiPhoto">
+            <ul>
+            <li>
+            <div class="photoes">
+            <a href="goods.php?id=439" target="_blank"><img src="images/201708/thumb_img/439_thumb_G_1503388974431.jpg" alt="正宗印度小叶紫檀1.0手串108颗高油高密老料爆款"></a>
+            </div>
+            <div class="titles">
+            <a href="goods.php?id=439" target="_blank">正宗印度小叶紫檀1.0手串108颗高油高密老料爆款</a>
+            </div>
+            <div class="prices">￥568元</div>
+            </li>
+            <li>
+            <div class="photoes">
+            <a href="goods.php?id=448" target="_blank"><img src="images/201708/thumb_img/448_thumb_G_1503389119494.jpg" alt="小叶紫檀男女手串1.2老料带金星佛珠民族风爆款"></a>
+            </div>
+            <div class="titles">
+            <a href="goods.php?id=448" target="_blank">小叶紫檀男女手串1.2老料带金星佛珠民族风爆款</a>
+            </div>
+            <div class="prices">￥488元</div>
+            </li>
+            <li>
+            <div class="photoes">
+            <a href="goods.php?id=449" target="_blank"><img src="images/201708/thumb_img/449_thumb_G_1503389190477.jpg" alt="小叶紫檀手串1.8鸡血红高油高密金星爆款"></a>
+            </div>
+            <div class="titles">
+            <a href="goods.php?id=449" target="_blank">小叶紫檀手串1.8鸡血红高油高密金星爆款</a>
+            </div>
+            <div class="prices">￥658元</div>
+            </li>
+            </ul>
+            </div>
+            </div>
+            <div class="shopGuige">
+            <div class="threeTitle">
+            <ul>
+            <li class="on"><a href="#goods_desc">商品详情</a></li>
+            <li><a href="#canShu">规格参数</a></li>
+            <li><a href="#ECS_COMMENT">用户评价(<em>0</em>)</a></li>
+            </ul>
+            </div>
+            <div class="canShu" id="canShu">
+            <h3>商品属性</h3>
+            <ul>
+            <li class="nan">材质：小叶紫檀</li>
+            <li class="nan">是否现货：现货</li>
+            <li class="nan">销售渠道：小叶紫檀商城</li>
+            <li class="nan">适用人群：情侣</li>
+            <li class="nan">成色：全新</li>
+            <li class="nan">颜色分类：老料带星</li>
+            <li class="nan">风格：民族风</li>
+            <li class="nan">价格区间：366~488</li>
+            <li class="nan">货号：ECS000448</li>
+            <li class="nan">品牌：小叶紫檀网</li>
+            <li class="nan">标签：小叶紫檀1.2cm手串老料金星</li>
+            </ul>
+            </div>
+            <div class="bigPhotoes" id="goods_desc">
+            <p><img src="/images/upload/Image/1(170).jpg" alt="" width="750" height="750" /></p>
+            <p><img src="/images/upload/Image/2(169).jpg" alt="" width="750" height="750" /></p>
+            <p><img src="/images/upload/Image/3(162).jpg" alt="" width="750" height="750" /></p>
+            <p><img src="/images/upload/Image/4(156).jpg" alt="" width="750" height="750" /></p>
+            <p><img src="/images/upload/Image/6(121).jpg" alt="" width="750" height="750" /></p>
+            <p><img src="/images/upload/Image/7(113).jpg" alt="" width="750" height="750" /></p>
+            <p>&nbsp;</p>                </div>
+            <div class="mainFoot">
+            <div class="pingjia">用户评价</div>
+            <div class="footMain">
+            <div class="haopingdu">
+            <div class="pingBox">
+            <p class="baifenbi">99<span>%</span></p>
+            <p class="font">好评度</p>
+            </div>
+            <div class="linkBox">
+            <ul>
+            <form name="tagForm" action="javascript:;" onSubmit="return submitTag(this)" id="tagForm">
+            </form>
+            </ul>
+            </div>
+            </div>
+
+            <script type="text/javascript" src="js/utils.js"></script><div id="ECS_COMMENT" class="content"> 
+
+
+
+
+            <form action="javascript:;" onsubmit="submitComment(this)" method="post" name="commentForm" id="commentForm">
+            <p class="publish">发表评论</p>
+            <p class="nickName">昵称：<span>admin5</span></p>
+            <div class="mark">
+            <div class="markFont">评分：</div>
+            <div class="rating">
+            <a href="javascript:void(0);"></a>
+            <a href="javascript:void(0);"></a>
+            <a href="javascript:void(0);"></a>
+            <a href="javascript:void(0);"></a>
+            <a href="javascript:void(0);"></a>
+            </div>
+            <input type="hidden" id="comment_rank" name="comment_rank" value="0" />
+            </div>
+            <textarea class="message" name="content" id="content" placeholder="留言："></textarea>
+            <input type="hidden" name="cmt_type" value="0" />
+            <input type="hidden" name="id" value="448" />
+            <div class="captchabody">
+            <span>验证码：</span>
+            <input type="text" name="captcha"  class="inputBorder" style="width:50px; margin-left:5px;"/>
+            <span class="captcha"><img src="captcha.php?1945327012" alt="captcha" onClick="this.src='captcha.php?'+Math.random()" ></span>
+            </div>
+            <input value="确认提交" class="sub" type="submit">
+                                </form>
+                                <script type="text/javascript">
+                                    var cmt_empty_username = "请输入您的用户名称";
+                                    var cmt_empty_email = "请输入您的电子邮件地址";
+                                    var cmt_error_email = "电子邮件地址格式不正确";
+                                    var cmt_empty_content = "您没有输入评论的内容";
+                                    var captcha_not_null = "验证码不能为空!";
+                                    var cmt_invalid_comments = "无效的评论内容!";
+
+                                    /**
+                                    * 提交评论信息
+                                    */
+                                    function submitComment(frm)
+                                    {
+                                    var cmt = new Object;
+
+                                    //cmt.username        = frm.elements['username'].value;
+                                    //cmt.email           = frm.elements['email'].value;
+                                    cmt.content         = frm.elements['content'].value;
+                                    cmt.type            = frm.elements['cmt_type'].value;
+                                    cmt.id              = frm.elements['id'].value;
+                                    cmt.enabled_captcha = frm.elements['enabled_captcha'] ? frm.elements['enabled_captcha'].value : '0';
+                                    cmt.captcha         = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+                                    cmt.rank            = 0;
+
+                                    cmt.rank = frm.elements['comment_rank'].value;
+                                    /*for (i = 0; i < frm.elements['comment_rank'].length; i++)
+                                    {
+                                    if (frm.elements['comment_rank'][i].checked)
+                                    {
+                                    cmt.rank = frm.elements['comment_rank'][i].value;
+                                    }
+                                    }*/
+
+                                    //  if (cmt.username.length == 0)
+                                    //  {
+                                    //     alert(cmt_empty_username);
+                                    //     return false;
+                                    //  }
+
+                                    /*if (cmt.email.length > 0)
+                                    {
+                                    if (!(Utils.isEmail(cmt.email)))
+                                    {
+                                    alert(cmt_error_email);
+                                    return false;
+                                    }
+                                    }
+                                    else
+                                    {
+                                    alert(cmt_empty_email);
+                                    return false;
+                                    }*/
+
+                                    if (cmt.content.length == 0)
+                                    {
+                                    alert(cmt_empty_content);
+                                    return false;
+                                    }
+
+                                    if (cmt.enabled_captcha > 0 && cmt.captcha.length == 0 )
+                                    {
+                                    alert(captcha_not_null);
+                                    return false;
+                                    }
+
+                                    Ajax.call('comment.php', 'cmt=' + cmt.toJSONString(), commentResponse, 'POST', 'JSON');
+                                    return false;
+                                    }
+
+                                    /**
+                                    * 处理提交评论的反馈信息
+                                    */
+                                    function commentResponse(result)
+                                    {
+                                    if (result.message)
+                                    {
+                                    alert(result.message);
+                                    }
+
+                                    if (result.error == 0)
+                                    {
+                                    var layer = document.getElementById('ECS_COMMENT');
+
+                                    if (layer)
+                                    {
+                                    layer.innerHTML = result.content;
+                                    }
+                                    }
+                                    }
+
+                                    var startDom = document.querySelectorAll(".rating>a");
+                                    var startLen = startDom.length;
+                                    var temp = 0;
+                                    for (var i =0;i<startLen;i++){
+                                    startDom[i].index = i;
+
+                                    startDom[i].addEventListener("mouseover",function () {
+                                    clear();
+                                    for(var j = 0; j < this.index + 1; j++){
+                                    startDom[j].style.backgroundPosition = '0 0';
+                                    }
+                                    });
+
+                                    startDom[i].addEventListener("mouseout",function () {
+                                    for(var j = 0; j < this.index + 1; j++){
+                                    startDom[j].style.backgroundPosition = '0 -16px';
+                                    }
+                                    current(temp);
+                                    });
+
+                                    startDom[i].addEventListener("click",function () {
+                                    temp = this.index + 1;
+                                    document.getElementById('comment_rank').value = temp;
+                                    });
+
+                                    }
+                                    //清除所有
+                                    function clear(){
+                                    for(var i = 0, len = startLen; i < len; i++){
+                                    startDom[i].style.backgroundPosition = '0 -16px';
+                                    }
+                                    }
+                                    //显示当前第几颗星
+                                    function current(temp){
+                                    for(var i = 0; i < temp; i++){
+                                    startDom[i].style.backgroundPosition = '0 0';
+                                    }
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container margin-center flow-item">
+            <ul class="clearfix">
+                <li class="one"><span>100%正品</span><i>假一赔三</i></li>
+                <li class="two"><span>支付安全</span><i>退款承诺</i></li>
+                <li class="three"><span>闪电发货</span><i>延迟补偿</i></li>
+                <li class="four"><span>购物保障</span><i>售后无忧</i></li>
+            </ul>
+        </div>
+        <div class="container margin-center about-links">
+            <div class="clearfix">
+                <dl>
+                    <dt><a href="article_cat.php?id=5">新手上路 </a></dt>
+                    <dd><a href="article.php?id=10" title="购物流程">购物流程</a></dd>
+                    <dd><a href="article.php?id=82" title="发票问题">发票问题</a></dd>
+                    <dd><a href="article.php?id=83" title="订单操作">订单操作</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=10">会员中心</a></dt>
+                    <dd><a href="article.php?id=18" title="资金管理">资金管理</a></dd>
+                    <dd><a href="article.php?id=19" title="我的收藏">我的收藏</a></dd>
+                    <dd><a href="article.php?id=20" title="我的订单">我的订单</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=7">配送与支付 </a></dt>
+                    <dd><a href="article.php?id=15" title="配送范围">配送范围</a></dd>
+                    <dd><a href="article.php?id=17" title="支付方式">支付方式</a></dd>
+                    <dd><a href="article.php?id=85" title="常见问题">常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=8">服务保证 </a></dt>
+                    <dd><a href="article.php?id=9" title="售后流程">售后流程</a></dd>
+                    <dd><a href="article.php?id=22" title="服务保证">服务保证</a></dd>
+                    <dd><a href="article.php?id=26" title="投诉与建议">投诉与建议</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=9">联系我们 </a></dt>
+                    <dd><a href="article.php?id=4" title="联系我们">联系我们</a></dd>
+                    <dd><a href="article.php?id=5" title="公司简介">公司简介</a></dd>
+                    <dd><a href="article.php?id=16" title="诚聘英才">诚聘英才</a></dd>
+                </dl>
+                <div class="qr-code">
+                    <img src="images/f_logo.png" alt="">
+                    <p class="qr_code_phone">400-0099-115</p>
+                    <p class="qr_code_server">服务时间：8：30-23：00</p>
+                    <a href="#" class="qr_code_answer">在线咨询</a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-box">
+            <div class="margin-center container tc">
+                <div class="copy-link">
+                </div>
+                <p>&copy; 2005-2017 小叶紫檀商城 版权所有，并保留所有权利。</p>
+                <p>广东省惠州市江北佳兆业二期B2座24楼 </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(function () {
+        // 大小尺寸中的图片切换
+        $('.big_small').click(function () {
+            $('.big_small').removeClass('border_red');
+            $(this).addClass('border_red');
+        })
+        // 购物车加
+        $('.add').click(function () {
+            var numVal = $(this).siblings('.shuzhi');
+            numVal.val(parseInt(numVal.val())+1);
+        })
+        // 购物车减
+        $('.jian').click(function () {
+            var numVal = $(this).siblings('.shuzhi');
+            numVal.val(parseInt(numVal.val())-1);
+            if (numVal.val() < 1) {
+                numVal.val(1);
+                alert('亲，最少购买一件商品！')
+            }
+        })
+    })
+</script>

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/change.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="action/swiper-3.4.2.min.js"></script>
+    <script src="action/common.js"></script>
+    <script type="text/javascript" src="js/transport.js"></script>
+    <!-- 兼容ecshop -->
+    <script type="text/javascript">
+        $(function() {
+        window.__Object_toJSONString = Object.prototype.toJSONString;
+        delete Object.prototype.toJSONString;
+        });
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+    var process_request = "正在处理您的请求...";
+    </script>
+    <div id="append_parent"></div>
+    <div class="header">
+        <div class="container margin-center" id="page_header">
+            <div class="logo-q-menu fl">
+                <a href="/" class="logo"><img src="images/logo.gif" alt="小叶紫檀商城-物美价廉的小叶紫檀购物商城,货真价实的小叶紫檀购物商城."></a>
+                <div class="q-menu">
+                    <a href="javascript:void(0)" class="all">全部品类</a>
+                    <ul class="cateTree">
+                        <li class="cate01">
+                            <dl>
+                                <dt><a href="category.php?id=33">手串</a></dt>
+                                <dd><a href="category.php?id=36">金星</a></dd>
+                                <dd><a href="category.php?id=35">老料</a></dd>
+                                <dd><a href="category.php?id=41">鸡血料</a></dd>
+                                <dd><a href="category.php?id=52">泥料</a></dd>
+                                <dd><a href="category.php?id=39">瘿子</a></dd>
+                                <dd><a href="category.php?id=43">包浆</a></dd>
+                                <dd><a href="category.php?id=48">瘤疤</a></dd>
+                                <dd><a href="category.php?id=40">水波纹</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate02">
+                            <dl>
+                                <dt><a href="category.php?id=26">把件</a></dt>
+                                <dd><a href="category.php?id=44">生肖</a></dd>
+                                <dd><a href="category.php?id=45">雕刻品</a></dd>
+                                <dd><a href="category.php?id=46">摆件</a></dd>
+                                <dd><a href="category.php?id=47">貔貅</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate03">
+                            <dl>
+                                <dt><a href="category.php?id=1">木料</a></dt>
+                                <dd><a href="category.php?id=63">饼料</a></dd>
+                                <dd><a href="category.php?id=64">野生料</a></dd>
+                                <dd><a href="category.php?id=65">拆房料</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate04">
+                            <dl>
+                                <dt><a href="category.php?id=34">工具</a></dt>
+                                <dd><a href="category.php?id=66">文玩保养</a></dd>
+                                <dd><a href="category.php?id=67">盘玩套装</a></dd>
+                                <dd><a href="category.php?id=68">打磨机器</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-small-menu fr">
+                <div class="small tr">
+                    <span class="login-reg"><a href="user.php">登录</a><a href="user.php?act=register">注册</a></span>
+                                    
+                    <span id="ECS_HCARTINFO" class="car"><a href="flow.php" title="查看购物车">购物车(<i>0</i>)</a></span>
+                </div>
+                <div class="search">
+                    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()">
+                        <div class="keywords-box fl">
+                            <input name="keywords" placeholder="搜索你要的产品" type="text" id="keyword" value="" class="search_input"  />
+                        </div>
+                        <div class="btn-box fl">
+                            <input name="imageField" type="submit" value="搜索" class="btn-submit" />
+                        </div>
+                        <div class="flow-one fl">400-0099-115</div>
+                        <div class="flow-two fl">服务时间：8：30-23：00</div>
+                    </form>
+                    <div class="search-keys">热门搜索：
+                        <a href="search.php?keywords=%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80">小叶紫檀</a>
+                        <a href="search.php?keywords=%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80%E6%89%8B%E4%B8%B2">小叶紫檀手串</a>
+                        <a href="search.php?keywords=%E9%87%91%E6%98%9F">金星</a>
+                        <a href="search.php?keywords=%E5%8D%B0%E5%BA%A6%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80">印度小叶紫檀</a>
+                    </div>
+                </div>
+                <ul class="menu">
+                    <li class="on"><a href="/">首页</a></li>
+                    <li ><a href="category.php?id=33" >手串</a></li>
+                    <li ><a href="category.php?id=26" >把件</a></li>
+                    <li ><a href="category.php?id=1" >定制</a></li>
+                    <li ><a href="category.php?id=34" >工具</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <style>
+    </style>
+    <div id="carousel" class="carousel">
+        <div class="carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="http://sc.xyzt.com/goods.php?id=432"><img src="data/afficheimg/20170821aougsl.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="http://sc.xyzt.com/goods.php?id=439"><img src="data/afficheimg/20170821buflnd.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="http://sc.xyzt.com/goods.php?id=438"><img src="data/afficheimg/20170821gawxwx.jpg" alt=""></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (Object.prototype.toJSONString){
+        var oldToJSONString = Object.toJSONString;
+        Object.prototype.toJSONString = function(){
+        if (arguments.length > 0){
+        return false;
+        }else{
+        return oldToJSONString.apply(this, arguments);
+        }
+        }}
+        var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay:4000,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        })
+    </script>
+    <div class="container margin-center main-three-product">
+        <ul>
+            <li><a href='affiche.php?ad_id=18&amp;uri=http%3A%2F%2Fshang.qq.com%2Femail%2Fstop%2Femail_stop.html%3Fqq%3D2062167155%26sig%3D7ac675d760e8487cdcd7d8f6deaa51494bc44f87b356c020%26tttt%3D1%26ADUIN%3D2609867000%26ADSESSION%3D1503621215%26ADTAG%3DCLIENT.QQ.5531_.0%26ADPUBNO%3D26691'
+            target='_blank'><img src='data/afficheimg/1503299780493125762.jpg' width='390' height='180'
+            border='0' /></a></li>
+            <li><a href='affiche.php?ad_id=16&amp;uri=http%3A%2F%2Fshang.qq.com%2Femail%2Fstop%2Femail_stop.html%3Fqq%3D2062167155%26sig%3D7ac675d760e8487cdcd7d8f6deaa51494bc44f87b356c020%26tttt%3D1%26ADUIN%3D2609867000%26ADSESSION%3D1503621215%26ADTAG%3DCLIENT.QQ.5531_.0%26ADPUBNO%3D26691'
+            target='_blank'><img src='data/afficheimg/1503299760137751968.jpg' width='390' height='180'
+            border='0' /></a></li>
+            <li><a href='affiche.php?ad_id=17&amp;uri=http%3A%2F%2Fshang.qq.com%2Femail%2Fstop%2Femail_stop.html%3Fqq%3D2062167155%26sig%3D7ac675d760e8487cdcd7d8f6deaa51494bc44f87b356c020%26tttt%3D1%26ADUIN%3D2609867000%26ADSESSION%3D1503621215%26ADTAG%3DCLIENT.QQ.5531_.0%26ADPUBNO%3D26691'
+            target='_blank'><img src='data/afficheimg/1503739135116677674.jpg' width='390' height='180'
+            border='0' /></a></li>
+        </ul>
+    </div>
+    <div class="container margin-center hot-product">
+        <h3 class="h3title clearfix">
+            <span class="fl">热销推荐</span>
+            <span class="fr" id="btn-tab">
+            <a href="javascript:void(0);" class="aleft">&lt;</a>
+            <a href="javascript:void(0);" class="bleft">&gt;</a>
+            </span>
+        </h3>
+        <div class="product-container clearfix">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=434" target="_blank"><img src="images/434_thumb_G_1502800485169.jpg" alt="正宗印度串优小叶紫檀手串1.0cm老料高..."></a></div>
+                    <div class="price">            ￥499元          </div>
+                    <div class="title"><a href="goods.php?id=434" target="_blank">正宗印度串优小叶紫檀手串1.0cm老料高油高密佛珠优质款</a></div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=433" target="_blank"><img src="images/433_thumb_G_1502799935080.jpg" alt="正宗印度小叶紫檀1.0cm高油高密108..."></a></div>
+                    <div class="price">            ￥528元          </div>
+                    <div class="title"><a href="goods.php?id=433" target="_blank">正宗印度小叶紫檀1.0cm高油高密108颗优质款</a></div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=432" target="_blank"><img src="images/432_thumb_G_1502799455247.jpg" alt="正宗印度小叶紫檀手串2.0老料优质款"></a></div>
+                    <div class="price">            ￥578元          </div>
+                    <div class="title"><a href="goods.php?id=432" target="_blank">正宗印度小叶紫檀手串2.0老料优质款</a></div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=431" target="_blank"><img src="images/431_thumb_G_1502798779849.jpg" alt="正宗印度小叶紫檀高油高密2.0老料鸡血红..."></a></div>
+                    <div class="price">            ￥618元          </div>
+                    <div class="title"><a href="goods.php?id=431" target="_blank">正宗印度小叶紫檀高油高密2.0老料鸡血红优质款</a></div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=429" target="_blank"><img src="images/429_thumb_G_1502796448858.jpg" alt="正宗印度小叶紫檀鸡血料1.0cm108颗..."></a></div>
+                    <div class="price">            ￥468元          </div>
+                    <div class="title"><a href="goods.php?id=429" target="_blank">正宗印度小叶紫檀鸡血料1.0cm108颗促销款</a></div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=451" target="_blank"><img src="images/451_thumb_G_1503124526921.jpg" alt="小叶紫檀手串1.5cm鸡血红带星泥料黑筋..."></a></div>
+                    <div class="price">            ￥328元          </div>
+                    <div class="title"><a href="goods.php?id=451" target="_blank">小叶紫檀手串1.5cm鸡血红带星泥料黑筋特价款</a></div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=465" target="_blank"><img src="images/465_thumb_G_1503365618072.jpg" alt="正宗印度小叶紫檀0.8老料金星情侣手链1..."></a></div>
+                    <div class="price">            ￥928元          </div>
+                    <div class="title"><a href="goods.php?id=465" target="_blank">正宗印度小叶紫檀0.8老料金星情侣手链1.0鸡血红金星手串108颗优质款</a></div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="thumb"><a href="goods.php?id=464" target="_blank"><img src="images/464_thumb_G_1503568552534.jpg" alt="正宗印度小叶紫檀2.0鸡血红金星0.8老..."></a></div>
+                    <div class="price">            ￥918元          </div>
+                    <div class="title"><a href="goods.php?id=464" target="_blank">正宗印度小叶紫檀2.0鸡血红金星0.8老料108颗金星情侣手串优质款</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var hotgoods = new Swiper('.product-container', {
+        slidesPerView: 5,
+        paginationClickable: true,
+        spaceBetween: 30,
+        nextButton: '.bleft',
+        prevButton: '.aleft',
+        loop:true
+        });
+    </script>
+    <div class="container super margin-center">
+        <div class="promotion clearfix">
+            <h3>
+                <span class="fl">超值促销</span>
+                <span class="fr"><a href="search.php?intro=best" class="more">查看更多商品</a></span>
+            </h3>
+            <ul>
+                <li class="item01">
+                    <i></i>
+                    <a href="goods.php?id=439" target="_blank">
+                    <img src="images/439_thumb_G_1503388974431.jpg" alt="正宗印度小叶紫檀1.0手串108颗高油高密老料爆款">
+                    </a>
+                </li>
+                <li class="item02">
+                    <i></i>
+                    <a href="goods.php?id=448" target="_blank">
+                    <img src="images/448_thumb_G_1503389119494.jpg" alt="小叶紫檀男女手串1.2老料带金星佛珠民族风爆款">
+                    </a>
+                </li>
+                <li class="item03">
+                    <i></i>
+                    <a href="goods.php?id=449" target="_blank">
+                    <img src="images/449_thumb_G_1503389190477.jpg" alt="小叶紫檀手串1.8鸡血红高油高密金星爆款">
+                    </a>
+                </li>
+                <li class="item04">
+                    <i></i>
+                    <a href="goods.php?id=452" target="_blank">
+                    <img src="images/452_thumb_G_1503389264788.jpg" alt="正品小叶紫檀手串2.0鸡血红金星文玩佛珠手串爆款">
+                    </a>
+                </li>
+                <li class="item05">
+                    <i></i>
+                    <a href="goods.php?id=457" target="_blank">
+                    <img src="images/457_thumb_G_1503389313360.jpg" alt="印度小叶紫檀1.0手串鸡血红爆满金星108颗文玩佛珠手串爆款">
+                    </a>
+                </li>
+                <li class="item06">
+                    <i></i>
+                    <a href="goods.php?id=456" target="_blank">
+                    <img src="images/456_thumb_G_1503389347407.jpg" alt="小叶紫檀0.8cm手串108颗鸡血红金星高油密特价款">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 1F -->
+    <div class="container margin-center fs-col1 clearfix mt50">
+        <div class="fl cate-big">
+            <dl class="categroys">
+                <dt>1F 手串</dt>
+                <dd><a href="category.php?id=36">金星</a></dd>
+                <dd><a href="category.php?id=35">老料</a></dd>
+                <dd><a href="category.php?id=41">鸡血料</a></dd>
+                <dd><a href="category.php?id=52">泥料</a></dd>
+                <dd><a href="category.php?id=39">瘿子</a></dd>
+                <dd><a href="category.php?id=43">包浆</a></dd>
+                <dd><a href="category.php?id=48">瘤疤</a></dd>
+                <dd><a href="category.php?id=40">水波纹</a></dd>
+            </dl>
+            <div class="big-thumb">
+                <a href='affiche.php?ad_id=9&amp;uri=http%3A%2F%2Fsc.xyzt.com%2Fgoods.php%3Fid%3D467' target='_blank'><img src='data/afficheimg/1503460370759935963.jpg' width='500' height='480' border='0' /></a>            
+            </div>
+        </div>
+        <div class="inlist fr">
+            <ul>
+                <li>
+                    <div class="thumb"><a href="goods.php?id=488"><img src="images/488_thumb_G_1503626632177.jpg" alt="正宗印度小叶紫檀极品爆满金星鸡血红2.0高油高密文玩手串极品款" /></a></div>
+                    <div class="title"><a href="goods.php?id=488" title="正宗印度小叶紫檀极品爆满金星鸡血红2.0高油高密文玩手串极品款">正宗印度小叶紫檀极品爆满金星鸡血红2.0高油高密文玩手串极品款</a></div>
+                    <div class="price">￥3888元                    </div>
+                </li>
+                <li>
+                    <div class="thumb"><a href="goods.php?id=474"><img src="images/474_thumb_G_1503400566883.jpg" alt="小叶紫檀情侣手串2.0鸡血红金星泥料1.2金星泥料鸡血红手串爆款" /></a></div>
+                    <div class="title"><a href="goods.php?id=474" title="小叶紫檀情侣手串2.0鸡血红金星泥料1.2金星泥料鸡血红手串爆款">小叶紫檀情侣手串2.0鸡血红金星泥料1.2金星泥料鸡血红手串爆款</a></div>
+                    <div class="price">￥1380元                    </div>
+                </li>
+                <li>
+                    <div class="thumb"><a href="goods.php?id=447"><img src="images/447_thumb_G_1503046030604.jpg" alt="小叶紫檀鸡血红泥料手串1.2cm高油高密佛珠文玩爆款" /></a></div>
+                    <div class="title"><a href="goods.php?id=447" title="小叶紫檀鸡血红泥料手串1.2cm高油高密佛珠文玩爆款">小叶紫檀鸡血红泥料手串1.2cm高油高密佛珠文玩爆款</a></div>
+                    <div class="price">￥498元                    </div>
+                </li>
+                <li>
+                    <div class="thumb"><a href="goods.php?id=446"><img src="images/446_thumb_G_1503044761111.jpg" alt="小叶紫檀情侣手串1.0玻璃底老料带星108颗爆款" /></a></div>
+                    <div class="title"><a href="goods.php?id=446" title="小叶紫檀情侣手串1.0玻璃底老料带星108颗爆款">小叶紫檀情侣手串1.0玻璃底老料带星108颗爆款</a></div>
+                    <div class="price">￥688元                    </div>
+                </li>
+                <li>
+                    <div class="thumb"><a href="goods.php?id=441"><img src="images/441_thumb_G_1502953997547.jpg" alt="正宗印度小叶紫檀0.6男女108颗鸡血红佛珠手串爆款" /></a></div>
+                    <div class="title"><a href="goods.php?id=441" title="正宗印度小叶紫檀0.6男女108颗鸡血红佛珠手串爆款">正宗印度小叶紫檀0.6男女108颗鸡血红佛珠手串爆款</a></div>
+                    <div class="price">￥388元                    </div>
+                </li>
+                <li>
+                    <div class="thumb"><a href="goods.php?id=440"><img src="images/440_thumb_G_1502952812216.jpg" alt="正宗印度小叶紫檀1.5鸡血红男女文玩佛珠手串爆款" /></a></div>
+                    <div class="title"><a href="goods.php?id=440" title="正宗印度小叶紫檀1.5鸡血红男女文玩佛珠手串爆款">正宗印度小叶紫檀1.5鸡血红男女文玩佛珠手串爆款</a></div>
+                    <div class="price">￥460元                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 2F -->
+    <div class="container margin-center fs-col2 clearfix mt50">
+        <div class="fl cate-big">
+            <dl class="categroys">
+                <dt>2F 把件</dt>
+                <dd><a href="category.php?id=44">生肖</a></dd>
+                <dd><a href="category.php?id=45">雕刻品</a></dd>
+                <dd><a href="category.php?id=46">摆件</a></dd>
+                <dd><a href="category.php?id=47">貔貅</a></dd>
+            </dl>
+            <div class="big-thumb">
+                <a href='affiche.php?ad_id=13&amp;uri=http%3A%2F%2Fsc.xyzt.com%2Fgoods.php%3Fid%3D215' target='_blank'><img src='data/afficheimg/1503472472110769132.jpg' width='500' height='480' border='0' /></a>            
+            </div>
+        </div>
+        <div class="inlist fr">
+            <ul>
+                <li>
+                <div class="thumb"><a href="goods.php?id=478"><img src="images/478_thumb_G_1503536715326.jpg" alt="正宗印度小叶紫檀手串0.6十二生肖3*5生肖牌鸡年生肖男女108颗鸡血红手串爆款" /></a></div>
+                <div class="title"><a href="goods.php?id=478" title="正宗印度小叶紫檀手串0.6十二生肖3*5生肖牌鸡年生肖男女108颗鸡血红手串爆款">正宗印度小叶紫檀手串0.6十二生肖3*5生肖牌鸡年生肖男女108颗鸡血红手串爆款</a></div>
+                <div class="price">￥426元            </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=450"><img src="images/450_thumb_G_1503123715122.jpg" alt="正品印度小叶紫檀手串0.6cm108颗带星生肖牌老料六字真经爆款" /></a></div>
+                <div class="title"><a href="goods.php?id=450" title="正品印度小叶紫檀手串0.6cm108颗带星生肖牌老料六字真经爆款">正品印度小叶紫檀手串0.6cm108颗带星生肖牌老料六字真经爆款</a></div>
+                <div class="price">￥368元            </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=394"><img src="images/394_thumb_G_1503459145730.jpg" alt="印度小叶紫檀雕刻小摆件十二生肖 牛" /></a></div>
+                <div class="title"><a href="goods.php?id=394" title="印度小叶紫檀雕刻小摆件十二生肖 牛">印度小叶紫檀雕刻小摆件十二生肖 牛</a></div>
+                <div class="price">￥328元            </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=393"><img src="images/393_thumb_G_1503459251103.jpg" alt="小叶紫檀十二生肖 羊" /></a></div>
+                <div class="title"><a href="goods.php?id=393" title="小叶紫檀十二生肖 羊">小叶紫檀十二生肖 羊</a></div>
+                <div class="price">￥328元            </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=392"><img src="images/392_thumb_G_1502274321471.jpg" alt="印度小叶紫檀扒钱老鼠手玩件发财老鼠" /></a></div>
+                <div class="title"><a href="goods.php?id=392" title="印度小叶紫檀扒钱老鼠手玩件发财老鼠">印度小叶紫檀扒钱老鼠手玩件发财老鼠</a></div>
+                <div class="price">￥328元            </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=390"><img src="images/390_thumb_G_1502274144386.jpg" alt="印度小叶紫檀十二生肖猪手把件摆件" /></a></div>
+                <div class="title"><a href="goods.php?id=390" title="印度小叶紫檀十二生肖猪手把件摆件">印度小叶紫檀十二生肖猪手把件摆件</a></div>
+                <div class="price">￥328元            </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 3F -->
+    <div class="container margin-center fs-col3 clearfix mt50">
+        <div class="fl cate-big">
+            <dl class="categroys">
+                <dt>3F 木料</dt>
+                <dd><a href="category.php?id=63">饼料</a></dd>
+                <dd><a href="category.php?id=64">野生料</a></dd>
+                <dd><a href="category.php?id=65">拆房料</a></dd>
+            </dl>
+            <div class="big-thumb">
+                <a href='affiche.php?ad_id=15&amp;uri=http%3A%2F%2Fsc.xyzt.com%2Fgoods.php%3Fid%3D184' target='_blank'><img src='data/afficheimg/1503472485323927159.jpg' width='500' height='480' border='0' /></a>            
+            </div>
+        </div>
+        <div class="inlist fr">
+            <ul>
+                <li>
+                <div class="thumb"><a href="goods.php?id=259"><img src="images/259_thumb_G_1502440603675.jpg" alt="5830号小叶紫檀1.9饼料1.8树头料" /></a></div>
+                <div class="title"><a href="goods.php?id=259" title="5830号小叶紫檀1.9饼料1.8树头料">5830号小叶紫檀1.9饼料1.8树头料</a></div>
+                <div class="price">￥450元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=256"><img src="images/256_thumb_G_1502440523428.jpg" alt="小叶紫檀1.2老料火焰纹局部满金星饼料" /></a></div>
+                <div class="title"><a href="goods.php?id=256" title="小叶紫檀1.2老料火焰纹局部满金星饼料">小叶紫檀1.2老料火焰纹局部满金星饼料</a></div>
+                <div class="price">￥650元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=255"><img src="images/255_thumb_G_1502442358874.jpg" alt="高油密印度小叶紫檀野生老原木饼料" /></a></div>
+                <div class="title"><a href="goods.php?id=255" title="高油密印度小叶紫檀野生老原木饼料">高油密印度小叶紫檀野生老原木饼料</a></div>
+                <div class="price">￥816元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=254"><img src="images/254_thumb_G_1502442304937.jpg" alt="6218号印度小叶紫檀1.8饼料" /></a></div>
+                <div class="title"><a href="goods.php?id=254" title="6218号印度小叶紫檀1.8饼料">6218号印度小叶紫檀1.8饼料</a></div>
+                <div class="price">￥530元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=252"><img src="images/252_thumb_G_1502442186267.jpg" alt="小叶紫檀爆满金星泥料鸡血红饼料半成品" /></a></div>
+                <div class="title"><a href="goods.php?id=252" title="小叶紫檀爆满金星泥料鸡血红饼料半成品">小叶紫檀爆满金星泥料鸡血红饼料半成品</a></div>
+                <div class="price">￥1466元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=184"><img src="images/184_thumb_G_1503454239751.jpg" alt="印度小叶紫檀佛珠料手镯料木料切片料2.0珠料" /></a></div>
+                <div class="title"><a href="goods.php?id=184" title="印度小叶紫檀佛珠料手镯料木料切片料2.0珠料">印度小叶紫檀佛珠料手镯料木料切片料2.0珠料</a></div>
+                <div class="price">￥1390元                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 4F -->
+    <div class="container margin-center fs-col4 clearfix mt50">
+        <div class="fl cate-big">
+            <dl class="categroys">
+                <dt>4F 工具</dt>
+                <dd><a href="category.php?id=66">文玩保养</a></dd>
+                <dd><a href="category.php?id=67">盘玩套装</a></dd>
+                <dd><a href="category.php?id=68">打磨机器</a></dd>
+            </dl>
+            <div class="big-thumb">
+                <a href='affiche.php?ad_id=14&amp;uri=http%3A%2F%2Fsc.xyzt.com%2Fgoods.php%3Fid%3D402' target='_blank'><img src='data/afficheimg/1503472209910069104.jpg' width='500' height='480' border='0' /></a>            
+            </div>
+        </div>
+        <div class="inlist fr">
+            <ul>
+                <li>
+                <div class="thumb"><a href="goods.php?id=407"><img src="images/407_thumb_G_1502445691575.jpg" alt="马鬃刷保养套装" /></a></div>
+                <div class="title"><a href="goods.php?id=407" title="马鬃刷保养套装">马鬃刷保养套装</a></div>
+                <div class="price">￥39元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=404"><img src="images/404_thumb_G_1502445488178.jpg" alt="玉石器珠宝鉴定放大镜30倍带UV紫光灯显微镜" /></a></div>
+                <div class="title"><a href="goods.php?id=404" title="玉石器珠宝鉴定放大镜30倍带UV紫光灯显微镜">玉石器珠宝鉴定放大镜30倍带UV紫光灯显微镜</a></div>
+                <div class="price">￥78元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=402"><img src="images/402_thumb_G_1502329462732.jpg" alt="小叶紫檀佛珠手串包浆盘玩手套麂皮文玩袋" /></a></div>
+                <div class="title"><a href="goods.php?id=402" title="小叶紫檀佛珠手串包浆盘玩手套麂皮文玩袋">小叶紫檀佛珠手串包浆盘玩手套麂皮文玩袋</a></div>
+                <div class="price">￥48元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=398"><img src="images/398_thumb_G_1502445157561.jpg" alt="文玩称电子称珠宝称中文按键500g便携迷你称" /></a></div>
+                <div class="title"><a href="goods.php?id=398" title="文玩称电子称珠宝称中文按键500g便携迷你称">文玩称电子称珠宝称中文按键500g便携迷你称</a></div>
+                <div class="price">￥30元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=397"><img src="images/397_thumb_G_1502445114627.jpg" alt="DIY文玩工具防水防滑金刚刷防磨防护手指套" /></a></div>
+                <div class="title"><a href="goods.php?id=397" title="DIY文玩工具防水防滑金刚刷防磨防护手指套">DIY文玩工具防水防滑金刚刷防磨防护手指套</a></div>
+                <div class="price">￥0.25元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=361"><img src="images/361_thumb_G_1502444760848.jpg" alt="精品文玩佛珠手串手镯木质包装盒收纳盒" /></a></div>
+                <div class="title"><a href="goods.php?id=361" title="精品文玩佛珠手串手镯木质包装盒收纳盒">精品文玩佛珠手串手镯木质包装盒收纳盒</a></div>
+                <div class="price">￥30元                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 5F -->
+    <div class="container margin-center fs-col5 clearfix mt50">
+        <div class="fl cate-big">
+            <dl class="categroys">
+                <dt>5F 套装</dt>
+                <dd><a href="category.php?id=66">情侣套装</a></dd>
+                <dd><a href="category.php?id=67">生肖套装</a></dd>
+            </dl>
+            <div class="big-thumb">
+                <a href='affiche.php?ad_id=14&amp;uri=http%3A%2F%2Fsc.xyzt.com%2Fgoods.php%3Fid%3D402' target='_blank'><img src='data/afficheimg/1503472209910069104.jpg' width='500' height='480' border='0' /></a>            
+            </div>
+        </div>
+        <div class="inlist fr">
+            <ul>
+                <li>
+                <div class="thumb"><a href="goods.php?id=407"><img src="images/407_thumb_G_1502445691575.jpg" alt="马鬃刷保养套装" /></a></div>
+                <div class="title"><a href="goods.php?id=407" title="马鬃刷保养套装">马鬃刷保养套装</a></div>
+                <div class="price">￥39元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=404"><img src="images/404_thumb_G_1502445488178.jpg" alt="玉石器珠宝鉴定放大镜30倍带UV紫光灯显微镜" /></a></div>
+                <div class="title"><a href="goods.php?id=404" title="玉石器珠宝鉴定放大镜30倍带UV紫光灯显微镜">玉石器珠宝鉴定放大镜30倍带UV紫光灯显微镜</a></div>
+                <div class="price">￥78元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=402"><img src="images/402_thumb_G_1502329462732.jpg" alt="小叶紫檀佛珠手串包浆盘玩手套麂皮文玩袋" /></a></div>
+                <div class="title"><a href="goods.php?id=402" title="小叶紫檀佛珠手串包浆盘玩手套麂皮文玩袋">小叶紫檀佛珠手串包浆盘玩手套麂皮文玩袋</a></div>
+                <div class="price">￥48元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=398"><img src="images/398_thumb_G_1502445157561.jpg" alt="文玩称电子称珠宝称中文按键500g便携迷你称" /></a></div>
+                <div class="title"><a href="goods.php?id=398" title="文玩称电子称珠宝称中文按键500g便携迷你称">文玩称电子称珠宝称中文按键500g便携迷你称</a></div>
+                <div class="price">￥30元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=397"><img src="images/397_thumb_G_1502445114627.jpg" alt="DIY文玩工具防水防滑金刚刷防磨防护手指套" /></a></div>
+                <div class="title"><a href="goods.php?id=397" title="DIY文玩工具防水防滑金刚刷防磨防护手指套">DIY文玩工具防水防滑金刚刷防磨防护手指套</a></div>
+                <div class="price">￥0.25元                    </div>
+                </li>
+                <li>
+                <div class="thumb"><a href="goods.php?id=361"><img src="images/361_thumb_G_1502444760848.jpg" alt="精品文玩佛珠手串手镯木质包装盒收纳盒" /></a></div>
+                <div class="title"><a href="goods.php?id=361" title="精品文玩佛珠手串手镯木质包装盒收纳盒">精品文玩佛珠手串手镯木质包装盒收纳盒</a></div>
+                <div class="price">￥30元                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 最近晒单 -->
+    <div class="container margin-center now_sd clearfix mt50">
+        <h3>最新晒单</h3>
+        <div class="now_sd_item">
+            <a href="#" class="now_sd_item_logo"><img src="images/393_thumb_G_1503459251103.jpg"></a>
+            <a href="#" class="now_sd_item_txt">东西很好东西很好东西很好东东西很好东西很好东西很好东 西很好东西很好东西很好</a>
+            <div class="now_sd_item_main">
+                <a href="#" class="now_sd_item_main_l"><img src="images/392_thumb_G_1502274321471.jpg"></a>
+                <a href="#" class="now_sd_item_main_r">小叶紫檀十二生小叶紫檀十二生小叶紫檀十二生 肖 羊</a>
+            </div>
+            <div class="now_sd_item_bottom">
+                <span>xugeorge</span>
+                <time>2017-08-24</time>
+            </div>
+        </div>
+        <div class="now_sd_item">
+            <a href="#" class="now_sd_item_logo"><img src="images/393_thumb_G_1503459251103.jpg"></a>
+            <a href="#" class="now_sd_item_txt">东西很好东西很好东西很好东东西很好东西很好东西很好东 西很好东西很好东西很好</a>
+            <div class="now_sd_item_main">
+                <a href="#" class="now_sd_item_main_l"><img src="images/392_thumb_G_1502274321471.jpg"></a>
+                <a href="#" class="now_sd_item_main_r">小叶紫檀十二生小叶紫檀十二生小叶紫檀十二生 肖 羊</a>
+            </div>
+            <div class="now_sd_item_bottom">
+                <span>xugeorge</span>
+                <time>2017-08-24</time>
+            </div>
+        </div>
+        <div class="now_sd_item">
+            <a href="#" class="now_sd_item_logo"><img src="images/393_thumb_G_1503459251103.jpg"></a>
+            <a href="#" class="now_sd_item_txt">东西很好东西很好东西很好东东西很好东西很好东西很好东 西很好东西很好东西很好</a>
+            <div class="now_sd_item_main">
+                <a href="#" class="now_sd_item_main_l"><img src="images/392_thumb_G_1502274321471.jpg"></a>
+                <a href="#" class="now_sd_item_main_r">小叶紫檀十二生小叶紫檀十二生小叶紫檀十二生 肖 羊</a>
+            </div>
+            <div class="now_sd_item_bottom">
+                <span>xugeorge</span>
+                <time>2017-08-24</time>
+            </div>
+        </div>
+        <div class="now_sd_item">
+            <a href="#" class="now_sd_item_logo"><img src="images/393_thumb_G_1503459251103.jpg"></a>
+            <a href="#" class="now_sd_item_txt">东西很好东西很好东西很好东东西很好东西很好东西很好东 西很好东西很好东西很好</a>
+            <div class="now_sd_item_main">
+                <a href="#" class="now_sd_item_main_l"><img src="images/392_thumb_G_1502274321471.jpg"></a>
+                <a href="#" class="now_sd_item_main_r">小叶紫檀十二生小叶紫檀十二生小叶紫檀十二生 肖 羊</a>
+            </div>
+            <div class="now_sd_item_bottom">
+                <span>xugeorge</span>
+                <time>2017-08-24</time>
+            </div>
+        </div>
+        <div class="now_sd_item">
+            <a href="#" class="now_sd_item_logo"><img src="images/393_thumb_G_1503459251103.jpg"></a>
+            <a href="#" class="now_sd_item_txt">东西很好东西很好东西很好东东西很好东西很好东西很好东 西很好东西很好东西很好</a>
+            <div class="now_sd_item_main">
+                <a href="#" class="now_sd_item_main_l"><img src="images/392_thumb_G_1502274321471.jpg"></a>
+                <a href="#" class="now_sd_item_main_r">小叶紫檀十二生小叶紫檀十二生小叶紫檀十二生 肖 羊</a>
+            </div>
+            <div class="now_sd_item_bottom">
+                <span>xugeorge</span>
+                <time>2017-08-24</time>
+            </div>
+        </div>
+    </div>
+    <!-- 咨询视频 -->
+    <div class="container margin-center vidoe">
+        <h3>
+            <span class="fl"><a href="article_cat.php?id=14">资讯视频</a></span>
+            <span class="fr"><a href="article_cat.php?id=14" class="more">查看更多</a></span>
+        </h3>
+        <ul>
+            <ul>
+                <li>
+                    <div class="thumb"><a href="article.php?id=96" title="加入VIP会员，畅享专属服务"><img src="data/article/1503645429139686343.jpg" alt="加入VIP会员，畅享专属服务"></a></div>
+                    <div class="title"><a href="article.php?id=96" title="加入VIP会员，畅享专属服务">加入VIP会员，畅享专属服务</a></div>
+                    <div class="des">加入紫檀之家VIP，享受属于您的专属服务。
+                        月月享受折扣，一对一专属客服教您如何把玩。
+                        更有会员...</div>
+                </li>
+                <li>
+                <div class="thumb"><a href="article.php?id=91" title="小叶紫檀瘿子的详解"><img src="data/article/1503624804052290910.jpg" alt="小叶紫檀瘿子的详解"></a></div>
+                <div class="title"><a href="article.php?id=91" title="小叶紫檀瘿子的详解">小叶紫檀瘿子的详解</a></div>
+                <div class="des">对于小叶紫檀手串的收藏发烧友来说，金星，水波纹，鱼鳞纹，那可都是梦寐以求的“神级装备”啊，而如果有一...</div>
+                </li>
+                <li>
+                <div class="thumb"><a href="article.php?id=90" title="小叶紫檀的火焰纹详解"><img src="data/article/1502251264139941827.png" alt="小叶紫檀的火焰纹详解"></a></div>
+                <div class="title"><a href="article.php?id=90" title="小叶紫檀的火焰纹详解">小叶紫檀的火焰纹详解</a></div>
+                <div class="des">最近小叶紫檀的火焰纹被炒得火热，人人都争相入手，好像在这样炎热的夏天能避暑似的，但是你知道什么是火焰...</div>
+                </li>
+                <li>
+                <div class="thumb"><a href="article.php?id=93" title="什么是小叶紫檀的老料？"><img src="data/article/1501553113535526097.png" alt="什么是小叶紫檀的老料？"></a></div>
+                <div class="title"><a href="article.php?id=93" title="什么是小叶紫檀的老料？">什么是小叶紫檀的老料？</a></div>
+                <div class="des">什么是老料紫檀，如果你去问商家，恐怕大部分商家并不清楚。而很多对小叶紫檀并不是十分了解的买家朋友也不...</div>
+                </li>
+            </ul>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="container margin-center flow-item">
+            <ul class="clearfix">
+                <li class="one"><span>100%正品</span><i>假一赔三</i></li>
+                <li class="two"><span>支付安全</span><i>退款承诺</i></li>
+                <li class="three"><span>闪电发货</span><i>延迟补偿</i></li>
+                <li class="four"><span>购物保障</span><i>售后无忧</i></li>
+            </ul>
+        </div>
+        <div class="container margin-center about-links">
+            <div class="clearfix">
+                <dl>
+                    <dt><a href="article_cat.php?id=5">新手上路 </a></dt>
+                    <dd><a href="article.php?id=10" title="购物流程">购物流程</a></dd>
+                    <dd><a href="article.php?id=82" title="发票问题">发票问题</a></dd>
+                    <dd><a href="article.php?id=83" title="订单操作">订单操作</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=10">会员中心</a></dt>
+                    <dd><a href="article.php?id=18" title="资金管理">资金管理</a></dd>
+                    <dd><a href="article.php?id=19" title="我的收藏">我的收藏</a></dd>
+                    <dd><a href="article.php?id=20" title="我的订单">我的订单</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=7">配送与支付 </a></dt>
+                    <dd><a href="article.php?id=15" title="配送范围">配送范围</a></dd>
+                    <dd><a href="article.php?id=17" title="支付方式">支付方式</a></dd>
+                    <dd><a href="article.php?id=85" title="常见问题">常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=8">服务保证 </a></dt>
+                    <dd><a href="article.php?id=9" title="售后流程">售后流程</a></dd>
+                    <dd><a href="article.php?id=22" title="服务保证">服务保证</a></dd>
+                    <dd><a href="article.php?id=26" title="投诉与建议">投诉与建议</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=9">联系我们 </a></dt>
+                    <dd><a href="article.php?id=4" title="联系我们">联系我们</a></dd>
+                    <dd><a href="article.php?id=5" title="公司简介">公司简介</a></dd>
+                    <dd><a href="article.php?id=16" title="诚聘英才">诚聘英才</a></dd>
+                </dl>
+                <div class="qr-code">
+                    <img src="images/f_logo.png" alt="">
+                    <p class="qr_code_phone">400-0099-115</p>
+                    <p class="qr_code_server">服务时间：8：30-23：00</p>
+                    <a href="#" class="qr_code_answer">在线咨询</a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-box">
+            <div class="margin-center container tc">
+                <div class="copy-link">
+                </div>
+                <p>&copy; 2005-2017 小叶紫檀商城 版权所有，并保留所有权利。</p>
+                <p>广东省惠州市江北佳兆业二期B2座24楼 </p>
+            </div>
+        </div>
+    </div>
+    <!-- 左侧浮动 -->
+    <section class="l_fixed">
+        <div class="index">导航</div>
+        <p class="la">手串</p>
+        <p class="lb">把件</p>
+        <p class="lc">木料</p>
+        <p class="ld">工具</p>
+        <p class="le">套装</p>
+        <p class="lf">晒单</p>
+        <p class="lg">视频</p>
+        <div class="return-top">顶部</div>
+    </section>
+    <!-- 左侧浮动 -->
+    <section class="r_fixed">
+        <!-- 登录界面 -->
+        <div class="r_fixed_user">
+            <img src="images/r_login.png">
+            <!-- 用户登录隐藏 -->
+            <section class="r_fixed_user_hide">
+                <p>用户登录</p>
+                <form>
+                    <div class="r_fixed_yhm">
+                        <label for="username">用户名：</label>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="r_fixed_mm r_fixed_yhm">
+                        <label for="password">密&nbsp;&nbsp;&nbsp;码：</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <input type="submit" name="submit" value="提交" class="submit">
+                </form>
+            </section>
+            <!-- 用户登录隐藏1 -->
+            <div class="r_fixed_user_hide1">
+                <div class="r_fixed_user_hide1_t">
+                    <a href="" class="r_fixed_user_hide1_t_l"><img src="images/393_thumb_G_1503459251103.jpg"></a>
+                    <a href="" class="r_fixed_user_hide1_t_r">
+                        <p>用户名：1224345</p>
+                        <p>级别：323423</p>
+                    </a>
+                </div>
+                <div class="r_fixed_user_hide1_b">
+                    <a href="">我的订单</a>
+                    <a href="">个人中心</a>
+                </div>
+            </div>
+        </div>
+        <!-- 客服界面 -->
+        <div class="r_fixed_kefu">
+            <img src="images/r_2.png">
+            <!-- 客服隐藏 -->
+            <section class="r_fixed_kefu_hide">
+                <div class="kefu_hide_t">
+                    <a href=""><img src="images/r_2_logo.png"></a>
+                    <a href="" class="kefu_hide_t_a">在线客服</a>
+                    <p class="kefu_hide_t_time"> 在线时间：8：30-23：00 </p>
+                </div>
+                <div class="kefu_hide_m">
+                    <img src="images/r_2_phone.png">
+                    <p class="kefu_hide_m_phone">400-0099-115</p>
+                    <p class="kefu_hide_m_time">服务时间：8：30-23：00</p>
+                </div>
+                <div class="kefu_hide_b">
+                    <img class="img1" src="images/r_2_chat.png">
+                    <p class="kefu_hide_m_time">微信客服</p>
+                    <p class="kefu_hide_m_time">扫一扫</p>
+                    <img class="img2" src="images/usercenter_59.png">
+                </div>
+            </section>
+        </div>
+        <!-- 购物车界面 -->
+        <div class="r_fixed_cart">
+            <img src="images/r_cart.png">
+            <p>购物车</p>
+            <b>0</b>
+        </div>
+        <!-- 收藏界面 -->
+        <div class="r_fixed_sc"><img src="images/r_sc.png"></div>
+    </section>
+    <!-- 右侧浮动==收藏界面隐藏 -->
+    <section class="sc_hide">
+        <div class="sc_hide_title"><img src="images/r_sc_sc.png">我的收藏</div>
+        <!-- 内容 -->
+        <div class="sc_hide_main">
+            <div class="sc_hide_main_item">
+                <a href="" class="sc_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="sc_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <a href=""><img class="r_cart_cart" src="images/r_cart_cart.png"></a>
+                    <img class="r_cart_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="sc_hide_main_item">
+                <a href="" class="sc_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="sc_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <a href=""><img class="r_cart_cart" src="images/r_cart_cart.png"></a>
+                    <img class="r_cart_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="sc_hide_main_item">
+                <a href="" class="sc_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="sc_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <a href=""><img class="r_cart_cart" src="images/r_cart_cart.png"></a>
+                    <img class="r_cart_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="sc_hide_main_item">
+                <a href="" class="sc_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="sc_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <a href=""><img class="r_cart_cart" src="images/r_cart_cart.png"></a>
+                    <img class="r_cart_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="sc_hide_main_item">
+                <a href="" class="sc_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="sc_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <a href=""><img class="r_cart_cart" src="images/r_cart_cart.png"></a>
+                    <img class="r_cart_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="sc_hide_main_item">
+                <a href="" class="sc_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="sc_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <a href=""><img class="r_cart_cart" src="images/r_cart_cart.png"></a>
+                    <img class="r_cart_del" src="images/r_cart_del.png">
+                </div>
+
+            </div>
+        </div>
+        <a href="" class="sc_hide_b">查看全部 <img src="images/sc_hide_left.png"></a>
+        <!-- 内容里为空时，显示此内容 -->
+        <div class="sc_hide_kong">
+            <img src="images/r_sc_sc.png">
+            <p>收藏夹里空空如也，赶紧去收藏吧~</p>
+            <a href="">去首页看看</a>
+        </div>
+    </section>
+    <!-- 我的收藏删除运算 -->
+    <script>
+        $(function () {
+            $('.r_cart_del').click(function () {
+                if (confirm("删除是不可恢复的，你确认要删除吗？")) {
+                    $(this).parents('.sc_hide_main_item').remove();
+                    shoucang();
+                }
+            })
+        })
+        // 判断我的收藏是否有收藏的产品
+        shoucang();
+        function shoucang() {
+            var scLen = $('.sc_hide_main').children().length;
+            if (scLen < 1) {
+                $('.sc_hide_kong').show();
+                $('.sc_hide_b').hide();
+            }
+        }
+    </script>
+    <!-- 右侧浮动==购物车界面隐藏 -->
+    <section class="cart_hide">
+        <div class="cart_hide_title"><img src="images/r_cart_cart.png">我的购物车</div>
+        <!-- 内容 -->
+        <div class="cart_hide_main">
+            <div class="cart_hide_main_item">
+                <a href="" class="cart_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="cart_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <img class="r_sc_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="cart_hide_main_item">
+                <a href="" class="cart_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="cart_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <img class="r_sc_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="cart_hide_main_item">
+                <a href="" class="cart_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="cart_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <img class="r_sc_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="cart_hide_main_item">
+                <a href="" class="cart_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="cart_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <img class="r_sc_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="cart_hide_main_item">
+                <a href="" class="cart_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="cart_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <img class="r_sc_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+            <div class="cart_hide_main_item">
+                <a href="" class="cart_hide_main_item_l"><img src="images/detail_80.png"></a>
+                <div class="cart_hide_main_item_r">
+                    <a href="" class="title">正宗印度小叶紫檀极品爆满金星 鸡血红2.0高油高密文玩手串极 品款</a>
+                    <p class="price">&yen;<b>23.5</b>元</p>
+                    <img class="r_sc_del" src="images/r_cart_del.png">
+                </div>
+            </div>
+        </div>
+        <!-- 购物车数量、价格 -->
+        <div class="cart_hide_t">
+            <font class="cart_hide_num"><b style="color:#ff0000;">0</b>件商品</font>
+            <font class="cart_hide_price">共计：<span><b>0.00</b>元</span></font>
+        </div>
+        <a href="" class="cart_hide_b">购物车清算</a>
+        <!-- 内容里为空时，显示此内容 -->
+        <div class="cart_hide_kong">
+            <img src="images/big_cart.png">
+            <p>购物车里空空如也，赶紧去逛逛吧~</p>
+            <a href="">去首页看看</a>
+        </div>
+    </section>
+    <!-- 我的购物车价格运算 -->
+    <script>
+        $(function(){
+            $('.r_sc_del').click(function(){
+                if (confirm("删除是不可恢复的，你确认要删除吗？")) {
+                    $(this).parents('.cart_hide_main_item').remove();
+                    cart();
+                }
+            })
+        })
+        cart();
+        function cart() {
+            // 判断我的购物车是否有商品
+            var cartLen = $('.cart_hide_main').children().length;
+            if (cartLen < 1) {
+                $('.cart_hide_kong').show();
+            }
+            // 获取购物车里的总数量
+            $('.cart_hide_num').find('b').text(cartLen);
+            $('.r_fixed_cart').find('b').text(cartLen);
+            // 获取购物车里的总价格
+            var totalPrice = 0;
+            $('.cart_hide_main_item').find('.price').find('b').each(function(k,v){
+                var priceVal = parseFloat($(this).text());
+                totalPrice += priceVal;
+            })
+            $('.cart_hide_price').find('b').text(totalPrice.toFixed(2));
+        }
+    </script>
+</body>
+</html>
+<script>
+    $(function () {
+        // 返回顶部
+        $('.return-top').click(function () {
+            $('body,html').animate({
+                'scrollTop':0,
+            },400)
+        })
+        $(document).scroll(function () {
+            var dT = $(document).scrollTop();
+            if (dT > 800) {
+                $('.l_fixed').slideDown(1000)
+            }else{
+                $('.l_fixed').slideUp(1000);
+            }
+        })
+
+    })
+    var f1H = $('.fs-col1').offset().top;
+    var f2H = $('.fs-col2').offset().top;
+    var f3H = $('.fs-col3').offset().top;
+    var f4H = $('.fs-col4').offset().top;
+    var f5H = $('.fs-col5').offset().top;
+    var f6H = $('.now_sd').offset().top;
+    var f7H = $('.vidoe').offset().top;
+    sT($('.la'),f1H)    
+    sT($('.lb'),f2H)    
+    sT($('.lc'),f3H)    
+    sT($('.ld'),f4H)    
+    sT($('.le'),f5H)    
+    sT($('.lf'),f6H)    
+    sT($('.lg'),f7H) 
+    // 滚动获取指定名称
+    function sT(aa,bb) {
+        $(document).scroll(function () {
+            var dTop = $(document).scrollTop();
+            if (dTop >= bb) {
+                $('.l_fixed').find('p').removeClass('index');
+                $('.l_fixed').find(aa).addClass('index');
+            }
+        })
+    }
+    // 点击到达指定位置
+    fH($('.la'),f1H)    
+    fH($('.lb'),f2H)    
+    fH($('.lc'),f3H)    
+    fH($('.ld'),f4H)    
+    fH($('.le'),f5H)    
+    fH($('.lf'),f6H)    
+    fH($('.lg'),f7H)    
+    function fH(aa,bb) {
+        aa.click(function () {
+            $('body,html').animate({
+                'scrollTop':bb,
+            },400)
+        })
+    }
+</script>
+<script>
+    $(function(){
+        // 点击收藏
+        $('.r_fixed_sc').click(function(){
+            $('.r_fixed').animate({
+                'right':'300px',
+            },400)
+            $('.sc_hide').animate({
+                'right':0,
+            },400);
+            $('.cart_hide').animate({
+                'right':'-300px',
+            },200)
+        })
+        // 点击购物车
+        $('.r_fixed_cart').click(function(){
+            $('.r_fixed').animate({
+                'right':'300px',
+            },400)
+            $('.cart_hide').animate({
+                'right':0,
+            },400)
+            $('.sc_hide').animate({
+                'right':'-300px',
+            },200)
+        })
+    })
+</script>

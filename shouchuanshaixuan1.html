@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手串筛选1</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/change.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script src="action/common.js"></script>
+    <script src="js/transport.js"></script>
+    <!-- 兼容ecshop -->
+    <script type="text/javascript">
+        $(function() {
+        window.__Object_toJSONString = Object.prototype.toJSONString;
+        delete Object.prototype.toJSONString;
+        });
+    </script>
+    <style>
+        .cateTree{display: none;}
+        .q-menu:hover .cateTree{display: block;}
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+    var process_request = "正在处理您的请求...";
+    </script>
+    <div id="append_parent"></div>
+    <div class="header">
+        <div class="container margin-center" id="page_header">
+            <div class="logo-q-menu fl">
+                <a href="/" class="logo"><img src="images/logo.gif" alt="小叶紫檀商城-物美价廉的小叶紫檀购物商城,货真价实的小叶紫檀购物商城."></a>
+                <div class="q-menu">
+                    <a href="javascript:void(0)" class="all">全部品类</a>
+                    <ul class="cateTree">
+                        <li class="cate01">
+                            <dl>
+                                <dt><a href="category.php?id=33">手串</a></dt>
+                                <dd><a href="category.php?id=36">金星</a></dd>
+                                <dd><a href="category.php?id=35">老料</a></dd>
+                                <dd><a href="category.php?id=41">鸡血料</a></dd>
+                                <dd><a href="category.php?id=52">泥料</a></dd>
+                                <dd><a href="category.php?id=39">瘿子</a></dd>
+                                <dd><a href="category.php?id=43">包浆</a></dd>
+                                <dd><a href="category.php?id=48">瘤疤</a></dd>
+                                <dd><a href="category.php?id=40">水波纹</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate02">
+                            <dl>
+                                <dt><a href="category.php?id=26">把件</a></dt>
+                                <dd><a href="category.php?id=44">生肖</a></dd>
+                                <dd><a href="category.php?id=45">雕刻品</a></dd>
+                                <dd><a href="category.php?id=46">摆件</a></dd>
+                                <dd><a href="category.php?id=47">貔貅</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate03">
+                            <dl>
+                                <dt><a href="category.php?id=1">木料</a></dt>
+                                <dd><a href="category.php?id=63">饼料</a></dd>
+                                <dd><a href="category.php?id=64">野生料</a></dd>
+                                <dd><a href="category.php?id=65">拆房料</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate04">
+                            <dl>
+                                <dt><a href="category.php?id=34">工具</a></dt>
+                                <dd><a href="category.php?id=66">文玩保养</a></dd>
+                                <dd><a href="category.php?id=67">盘玩套装</a></dd>
+                                <dd><a href="category.php?id=68">打磨机器</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-small-menu fr">
+                <div class="small tr">
+                    <span class="login-reg"><a href="user.php">登录</a><a href="user.php?act=register">注册</a></span>
+                                    
+                    <span id="ECS_HCARTINFO" class="car"><a href="flow.php" title="查看购物车">购物车(<i>0</i>)</a></span>
+                </div>
+                <div class="search">
+                    <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()">
+                        <div class="keywords-box fl">
+                            <input name="keywords" placeholder="搜索你要的产品" type="text" id="keyword" value="" class="search_input"  />
+                        </div>
+                        <div class="btn-box fl">
+                            <input name="imageField" type="submit" value="搜索" class="btn-submit" />
+                        </div>
+                        <div class="flow-one fl">400-0099-115</div>
+                        <div class="flow-two fl">服务时间：8：30-23：00</div>
+                    </form>
+                    <div class="search-keys">热门搜索：
+                        <a href="search.php?keywords=%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80">小叶紫檀</a>
+                        <a href="search.php?keywords=%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80%E6%89%8B%E4%B8%B2">小叶紫檀手串</a>
+                        <a href="search.php?keywords=%E9%87%91%E6%98%9F">金星</a>
+                        <a href="search.php?keywords=%E5%8D%B0%E5%BA%A6%E5%B0%8F%E5%8F%B6%E7%B4%AB%E6%AA%80">印度小叶紫檀</a>
+                    </div>
+                </div>
+                <ul class="menu">
+                    <li class="on"><a href="/">首页</a></li>
+                    <li ><a href="category.php?id=33" >手串</a></li>
+                    <li ><a href="category.php?id=26" >把件</a></li>
+                    <li ><a href="category.php?id=1" >定制</a></li>
+                    <li ><a href="category.php?id=34" >工具</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <style>
+    </style>
+    <!-- 内容详情 -->
+    <div class="container margin-center category-list">
+        <div class="page-title">
+            <h3>当前位置:</h3>
+            <div class="path">
+                <div>
+                    <div class="path"><a href=".">首页</a> <code>&gt;</code> <a href="category.php?id=26">把件</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="prclist">
+            <div class="fl">
+                <form method="GET" class="sort" name="listform">
+                    <a href="category.php?category=26&display=grid&brand=0&price_min=0&price_max=0&filter_attr=0&page=1&sort=sale_num&order=DESC#goods_list" ><img src="images/up.png" alt=""> 综合</a>
+                    <a href="category.php?category=26&display=grid&brand=0&price_min=0&price_max=0&filter_attr=0&page=1&sort=goods_id&order=ASC#goods_list"><img src="images/up.png" alt="">销量</a>
+                    <a href="category.php?category=26&display=grid&brand=0&price_min=0&price_max=0&filter_attr=0&page=1&sort=shop_price&order=ASC#goods_list"><img src="images/up.png" alt="价格">价格</a>
+                    <a href="category.php?category=26&display=grid&brand=0&price_min=0&price_max=0&filter_attr=0&page=1&sort=last_update&order=DESC#goods_list" class="on">时间</a>
+                    <input type="hidden" name="category" value="26" />
+                    <input type="hidden" name="display" value="grid" id="display" />
+                    <input type="hidden" name="brand" value="0" />
+                    <input type="hidden" name="price_min" value="0" />
+                    <input type="hidden" name="price_max" value="0" />
+                    <input type="hidden" name="filter_attr" value="0" />
+                    <input type="hidden" name="page" value="1" />
+                    <input type="hidden" name="sort" value="last_update" />
+                    <input type="hidden" name="order" value="" />
+                </form>
+            </div>
+            <div class="fr">
+                <span class="simple_page">1/3</span>
+                <span class="left_right">
+                    <a href="">&lt;</a>
+                    <a href="category.php?id=26&amp;price_min=0&amp;price_max=0&amp;page=2&amp;sort=last_update">&gt;</a>
+                </span>
+            </div>
+        </div>
+        <!-- 所有分类 -->
+        <div class="all_fenlei">
+            <a href="">所有分类</a> &gt; 
+            <a href="">规格：1.0*108</a>  &gt;  
+            <a href="">品相：鸡血料</a> &gt; 
+            <a href="">配饰：12生肖</a>
+        </div>
+        <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);">
+            <div class="goods-list mt50">
+                <ul>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <a href="javascript:addToCarts(294)" class="buybtn">加入购物车</a>
+                            <a href="goods.php?id=294" target="_blank"><img src="images/394_thumb_G_1503459145730.jpg" alt="小叶紫檀十二生..."></a>
+                        </div>
+                        <div class="title">
+                            <a href="goods.php?id=294" target="_blank">              
+                                <strong><font>小叶紫檀十二生肖鸡把件雕刻摆件</font></strong>
+                            </a>
+                        </div>
+                        <!-- 价格 -->
+                        <div class="bjsx_one">
+                            <div class="price">￥419元</div>
+                            <div class="bjsx_zan"><a href=""><img src="images/bjsx_zan.png"></a><span style="color: #ff0000;">99%</span></div>
+                            <div class="bjsx_msg"><a href=""><img src="images/bjsx_msg.png"></a><span style="color:#5a5a5a;">200</span></div>
+                        </div>
+                        <!-- 加入购物车 -->
+                        <div class="bjsx_cart">
+                            <div class="bjsx_cart_l">
+                                <span class="bjsx_cart_num">1</span>
+                                <span class="bjsx_cart_jia"><img src="images/bjsx_up.png"></span>
+                                <span class="bjsx_cart_jian"><img src="images/bjsx_down.png"></span>
+                            </div>
+                            <a href="" class="bjsx_cart_c">加入购物车</a>
+                            <div class="bjsx_cart_r">
+                                <img src="images/bjsx_sc.png">
+                                <font>收藏</font>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+        <form name="selectPageForm" action="/category.php" method="get">
+            <div class="pages mb50">
+                <div id="pager" class="pagebar">
+                    <em>总计 <b>80</b>  个记录</em>
+                    <a class="on" href="javascript:void(0)">1</a>
+                    <a href="category.php?id=26&amp;price_min=0&amp;price_max=0&amp;page=2&amp;sort=last_update">2</a>
+                    <a href="category.php?id=26&amp;price_min=0&amp;price_max=0&amp;page=3&amp;sort=last_update">3</a>
+                    <a class="next" href="category.php?id=26&amp;price_min=0&amp;price_max=0&amp;page=2&amp;sort=last_update">下一页</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="container margin-center flow-item">
+            <ul class="clearfix">
+                <li class="one"><span>100%正品</span><i>假一赔三</i></li>
+                <li class="two"><span>支付安全</span><i>退款承诺</i></li>
+                <li class="three"><span>闪电发货</span><i>延迟补偿</i></li>
+                <li class="four"><span>购物保障</span><i>售后无忧</i></li>
+            </ul>
+        </div>
+        <div class="container margin-center about-links">
+            <div class="clearfix">
+                <dl>
+                    <dt><a href="article_cat.php?id=5">新手上路 </a></dt>
+                    <dd><a href="article.php?id=10" title="购物流程">购物流程</a></dd>
+                    <dd><a href="article.php?id=82" title="发票问题">发票问题</a></dd>
+                    <dd><a href="article.php?id=83" title="订单操作">订单操作</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=10">会员中心</a></dt>
+                    <dd><a href="article.php?id=18" title="资金管理">资金管理</a></dd>
+                    <dd><a href="article.php?id=19" title="我的收藏">我的收藏</a></dd>
+                    <dd><a href="article.php?id=20" title="我的订单">我的订单</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=7">配送与支付 </a></dt>
+                    <dd><a href="article.php?id=15" title="配送范围">配送范围</a></dd>
+                    <dd><a href="article.php?id=17" title="支付方式">支付方式</a></dd>
+                    <dd><a href="article.php?id=85" title="常见问题">常见问题</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=8">服务保证 </a></dt>
+                    <dd><a href="article.php?id=9" title="售后流程">售后流程</a></dd>
+                    <dd><a href="article.php?id=22" title="服务保证">服务保证</a></dd>
+                    <dd><a href="article.php?id=26" title="投诉与建议">投诉与建议</a></dd>
+                </dl>
+                <dl>
+                    <dt><a href="article_cat.php?id=9">联系我们 </a></dt>
+                    <dd><a href="article.php?id=4" title="联系我们">联系我们</a></dd>
+                    <dd><a href="article.php?id=5" title="公司简介">公司简介</a></dd>
+                    <dd><a href="article.php?id=16" title="诚聘英才">诚聘英才</a></dd>
+                </dl>
+                <div class="qr-code">
+                    <img src="images/f_logo.png" alt="">
+                    <p class="qr_code_phone">400-0099-115</p>
+                    <p class="qr_code_server">服务时间：8：30-23：00</p>
+                    <a href="#" class="qr_code_answer">在线咨询</a>
+                </div>
+            </div>
+        </div>
+        <div class="copy-box">
+            <div class="margin-center container tc">
+                <div class="copy-link">
+                </div>
+                <p>&copy; 2005-2017 小叶紫檀商城 版权所有，并保留所有权利。</p>
+                <p>广东省惠州市江北佳兆业二期B2座24楼 </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(function () {
+        // 购物车加
+        $('.bjsx_cart_jia').click(function () {
+            var numVal = $(this).siblings('.bjsx_cart_num');
+            numVal.text(parseInt(numVal.text())+1);
+        })
+        // 购物车减
+        $('.bjsx_cart_jian').click(function () {
+            var numVal = $(this).siblings('.bjsx_cart_num');
+            numVal.text(parseInt(numVal.text())-1);
+            if (numVal.text() < 1) {
+                numVal.text(1);
+                alert('亲，最少购买一件商品！')
+            }
+        })
+        // 收藏
+        $('.bjsx_cart_r').click(function () {
+            var textVal = $(this).find('font').text();
+            if (textVal == '收藏') {
+                $(this).find('font').text('已收藏');
+            }else if (textVal == '已收藏') {
+                $(this).find('font').text('收藏');
+            }
+        })
+    })
+</script>
